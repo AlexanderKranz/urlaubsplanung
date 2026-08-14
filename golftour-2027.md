@@ -61,13 +61,13 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 → **Greenfees gesamt pro Person: 942 €** (95+382+300+55+110)
 
 #### Kosten gesamt pro Person (Costa del Sol, Stand jetzt)
-| Posten | Preis / Person |
-|---|---|
-| Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € |
-| Unterkunft (Airbnb, 459 € / 2 Pers.) | 229,50 € |
-| Mietwagen (255 € / 2 Pers.) | 127,50 € |
-| Greenfees (5 Tage, s. oben) | 942,00 € |
-| **Gesamt** | **1.731,64 €** |
+| Posten | Preis / Person | Status |
+|---|---|---|
+| Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € | bestätigt |
+| Unterkunft (Airbnb, 459 € / 2 Pers., bis 11.02. kostenlos stornierbar) | 229,50 € | **Gebucht (Ben)** |
+| Mietwagen (255 € / 2 Pers.) | 127,50 € | **Gebucht (Ben)** |
+| Greenfees (5 Tage, s. oben) | 942,00 € | offen |
+| **Gesamt** | **1.731,64 €** | |
 
 #### Offene Punkte (Costa del Sol)
 - ~~Baviera ist mit 1:10 ab Hotel eine sehr lange Fahrt für einen normalen Spieltag~~ — ✅ gelöst durch Tausch mit Santa Clara: Baviera ist jetzt Tag 5 (Abreisetag), danach geht's direkt zum Flughafen (~40 min) statt zurück zum Hotel.
