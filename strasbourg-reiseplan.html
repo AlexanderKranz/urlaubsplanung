@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Straßburg Wochenende · 28.–30. August · v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap');
+
+  :root {
+    --alsace-red:   #A3291A;
+    --alsace-gold:  #C8973A;
+    --stone:        #F2EDE6;
+    --ink:          #1C1410;
+    --muted:        #7A6A5E;
+    --line:         #DDD4C8;
+    --white:        #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--stone);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--alsace-red);
+    color: var(--white);
+    padding: 40px 28px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '🥨';
+    position: absolute;
+    right: 24px; top: 20px;
+    font-size: 64px;
+    opacity: 0.18;
+  }
+  .header-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 6vw, 42px);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  header h1 em {
+    font-style: italic;
+    color: var(--alsace-gold);
+  }
+  .header-meta {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 10px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .header-meta span::before { content: '· '; }
+  .header-meta span:first-child::before { content: ''; }
+
+  .days { padding: 20px 16px 40px; max-width: 700px; margin: 0 auto; }
+
+  .day {
+    margin-bottom: 28px;
+    border-radius: 10px;
+    background: var(--white);
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+
+  .day-header {
+    padding: 14px 20px 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .day-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+  .day-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+  }
+  .day-date {
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .entry:last-child { border-bottom: none; }
+
+  .entry-time {
+    padding: 16px 0 14px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--alsace-red);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+
+  .entry-body {
+    padding: 14px 18px 14px 12px;
+    border-left: 2px solid var(--line);
+  }
+  .entry-body.highlight { border-left-color: var(--alsace-gold); }
+  .entry-body.accent    { border-left-color: var(--alsace-red); }
+
+  .entry-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .entry-sub {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--stone);
+    color: var(--muted);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 4px;
+    font-weight: 500;
+  }
+  .tag.reserved {
+    background: #FFF0E8;
+    color: var(--alsace-red);
+  }
+  .tag.tip {
+    background: #FFF7E6;
+    color: #8A6010;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--muted);
+    padding: 0 20px 32px;
+    letter-spacing: 0.03em;
+  }
+  footer strong { color: var(--alsace-red); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Wochenende in <em>Straßburg</em></h1>
+  <div class="header-meta">
+    <span>28.–30. August 2025</span>
+  </div>
+</header>
+
+<div class="days">
+
+  <!-- ── FREITAG ───────────────────── -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-label">Tag 1</span>
+      <span class="day-title">Anreise, Escape Room &amp; Abend in der Stadt</span>
+      <span class="day-date">Fr · 28. Aug.</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">13:00</div>
+      <div class="entry-body">
+        <div class="entry-title">🚗 Abfahrt Hochheim</div>
+        <div class="entry-sub">A67 Richtung Mannheim → A5 Süd → Straßburg. Ca. 200 km, ~2,5 Std. Ankunft ~15:30–16:00 Uhr.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">15:30</div>
+      <div class="entry-body highlight">
+        <div class="entry-title">🏨 Check-in Adagio <span class="tag">Hotel</span></div>
+        <div class="entry-sub">Aparthotel Adagio Access Strasbourg Petite France · 27 Rue de Wasselonne · Zimmer verteilen, frisch machen, kurz erholen. Bezahlung vor Ort · 154,49 € pro Person · 617,96 € gesamt.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">17:00</div>
+      <div class="entry-body highlight">
+        <div class="entry-title">🚶 Erkundung Petite France &amp; 🍺 Le Garde Fou</div>
+        <div class="entry-sub">Spaziergang entlang der Kanäle, Fachwerkhäuser, Schleusenanlage Vauban – danach einchecken im <strong>Le Garde Fou</strong> (8 Rue du Faubourg-National, 4,7 ⭐). Bestes Craft-Beer-Lokal der Altstadt, große Zapfbier-Auswahl mit lokalen Elsässer Bieren. Liegt direkt um die Ecke vom Escape Room.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">18:30</div>
+      <div class="entry-body accent">
+        <div class="entry-title">🔐 Escape Room <span class="tag reserved">Gebucht</span></div>
+        <div class="entry-sub">Closed Escape Game Strasbourg · 3A Rue du 22 Novembre · Bewertung 4,9 ⭐ · Englisch problemlos möglich · Dauer 1 Stunde. Uber um 19:45 zur Bières Artisanales Perle bestellen.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">20:00</div>
+      <div class="entry-body accent">
+        <div class="entry-title">🍺 Abendessen <span class="tag reserved">Reserviert</span></div>
+        <div class="entry-sub">Bières Artisanales Perle · 10 Place de l'Abattoir · Craft-Bier-Brauerei mit Restaurant. Hausgebraute Biere, gutes Essen, legere Atmosphäre.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">spät</div>
+      <div class="entry-body">
+        <div class="entry-title">🌙 Absacker in der Petite France</div>
+        <div class="entry-sub">Académie de la Bière (bis 4:00 Uhr) oder Brasserie de la Lanterne (bis 1:30 Uhr) – beide fußläufig vom Hotel.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SAMSTAG ───────────────────── -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-label">Tag 2</span>
+      <span class="day-title">Kanu auf der Ill &amp; Abend mit Bier</span>
+      <span class="day-date">Sa · 29. Aug.</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">09:00</div>
+      <div class="entry-body">
+        <div class="entry-title">☕ Frühstück</div>
+        <div class="entry-sub">Frühstücksbuffet im Adagio. Ausschlafen – kein Stress bis vormittags.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">10:30</div>
+      <div class="entry-body">
+        <div class="entry-title">🚶 Altstadt &amp; Kathedrale</div>
+        <div class="entry-sub">Straßburger Münster, Rue des Hallebardes, Place Kléber. 20 Min. zu Fuß Richtung ASCPA oder kurze Uber-Fahrt. Gute Gelegenheit für <strong>Mitbringsel</strong> – Bäckereien, Feinkostläden und Weinhandlungen in der Altstadt haben samstags geöffnet.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">13:00</div>
+      <div class="entry-body highlight">
+        <div class="entry-title">🛶 Kanu · ASCPA <span class="tag reserved">Gebucht</span></div>
+        <div class="entry-sub">ASCPA · 20 Rue de la Plaine des Bouchers, 67100 Strasbourg · Tel: +33 3 88 39 68 24 · Kanu/Kajak auf der Ill durch die Petite France – eines der schönsten Erlebnisse in Straßburg. Geht bis 17:30 Uhr.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">17:30</div>
+      <div class="entry-body">
+        <div class="entry-title">🛁 Zurück ins Hotel &amp; frisch machen</div>
+        <div class="entry-sub">Umziehen und kurz erholen vor dem Abendessen.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">19:00</div>
+      <div class="entry-body accent">
+        <div class="entry-title">🍽️ Abendessen <span class="tag reserved">Reserviert</span></div>
+        <div class="entry-sub">Le Baeckeoffe d'Alsace · 14 Rue des Moulins · Klassische elsässische Küche, große Portionen, 9 Min. zu Fuß vom Hotel.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">21:00</div>
+      <div class="entry-body">
+        <div class="entry-title">🌙 Bier-Kneipentour Petite France</div>
+        <div class="entry-sub">Brasserie de la Lanterne (hausgebrautes Bier, bis 1:30 Uhr) → Académie de la Bière (bis 4:00 Uhr) → spontan weiterziehen.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SONNTAG ───────────────────── -->
+  <div class="day">
+    <div class="day-header">
+      <span class="day-label">Tag 3</span>
+      <span class="day-title">Frühstück &amp; Heimfahrt</span>
+      <span class="day-date">So · 30. Aug.</span>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">09:00</div>
+      <div class="entry-body">
+        <div class="entry-title">☕ Frühstück &amp; Check-out</div>
+        <div class="entry-sub">Gemütliches Frühstück im Hotel, danach Zimmer räumen und Gepäck ins Auto.</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-time">10:30</div>
+      <div class="entry-body accent">
+        <div class="entry-title">🚗 Heimfahrt nach Hochheim</div>
+        <div class="entry-sub">A35 → Rheinbrücke → A5 Nord → A67 Richtung Frankfurt. Ca. 200 km, ~2,5 Std. Ankunft ~13:00 Uhr.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
