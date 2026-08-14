@@ -66,7 +66,7 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 | Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € | **Gebucht (separat)** |
 | Unterkunft (Airbnb, 459 € / 2 Pers., bis 11.02. kostenlos stornierbar) | 229,50 € | **Gebucht (Ben)** |
 | Mietwagen (255 € / 2 Pers.) | 127,50 € | **Gebucht (Ben)** |
-| Greenfees (5 Tage, s. oben) | 942,00 € | offen |
+| Greenfees (5 Tage, s. oben) | 942,00 € | **noch buchen** |
 | **Gesamt** | **1.731,64 €** | |
 
 #### Offene Punkte (Costa del Sol)
