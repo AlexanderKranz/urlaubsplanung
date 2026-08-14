@@ -65,16 +65,16 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 |---|---|
 | Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € |
 | Unterkunft (Airbnb, 459 € / 2 Pers.) | 229,50 € |
-| Mietwagen (170 € / 2 Pers., kleiner Anbieter) | 85,00 € |
+| Mietwagen (255 € / 2 Pers.) | 127,50 € |
 | Greenfees (5 Tage, s. oben) | 942,00 € |
-| **Gesamt** | **1.689,14 €** |
+| **Gesamt** | **1.731,64 €** |
 
 #### Offene Punkte (Costa del Sol)
 - ~~Baviera ist mit 1:10 ab Hotel eine sehr lange Fahrt für einen normalen Spieltag~~ — ✅ gelöst durch Tausch mit Santa Clara: Baviera ist jetzt Tag 5 (Abreisetag), danach geht's direkt zum Flughafen (~40 min) statt zurück zum Hotel.
 - ~~Valderrama vs. Finca Cortesín — Entscheidung offen~~ — ✅ entschieden: Finca Cortesín (382 €) ersetzt Los Naranjos an Tag 2. Valderrama nicht gewählt (San Roque, Alto Club und Azata Golf waren ohnehin schon ausgeschlossen, alle zu hügelig).
 - **Los Naranjos** (16 min ab Hotel, 185 €, kein Golfamore, 1.–9. uneben/10.–18. flach) bleibt als günstigere Alternative im Hinterkopf, falls Finca Cortesín (382 €) zu teuer erscheint.
 - **Referenz-Unterkunftsoption:** Ona Marbella Inn für **591 € gesamt** — Alternative zum jetzt gewählten Airbnb (459 €), als Referenz stehen gelassen. Fahrzeiten von dort wurden recherchiert und gelten laut Nutzer auch für das Airbnb (liegt in der Nähe).
-- **Mietwagenauswahl offen:** kleiner Anbieter (170 € gesamt, aktuell in der Kostentabelle angesetzt) vs. Sixt (275 € gesamt, bekannterer Name).
+- ~~Mietwagenauswahl offen~~ — ✅ entschieden: 255 € gesamt.
 - Geplant: ähnliche HTML-Übersichtsdatei wie für Valencia (golftrip-valencia-2027.html), sobald die Greenfee-Preise vorliegen.
 
 ## Rabatte / Karten
