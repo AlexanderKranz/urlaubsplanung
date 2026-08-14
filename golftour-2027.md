@@ -32,17 +32,17 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 | Hotel | Lage | Preis (beide, ganzer Aufenthalt) |
 |---|---|---|
 | AluaSun Marbella Park | außerhalb | 376 € |
-| **✅ Ona Marbella Inn** | wie letztes Jahr (bekannt) | **591 €** — geplant |
+| Ona Marbella Inn | wie letztes Jahr (bekannt) | 591 € |
 | Hotel Monarque El Rodeo | noch zentraler | 616 € |
-| [Airbnb](https://www.airbnb.de/rooms/1429698256152680563?adults=2&check_in=2027-03-13&check_out=2027-03-17) | – (nicht recherchiert) | 459 € |
+| **✅ [Airbnb](https://www.airbnb.de/rooms/1429698256152680563?adults=2&check_in=2027-03-13&check_out=2027-03-17)** | in der Nähe vom Ona Marbella Inn | **459 €** — geplant |
 
-→ Geplant wird mit **Ona Marbella Inn** (591 €). Fahrzeiten zu den Golfplätzen und zum Flughafen für diese Adresse noch zu recherchieren.
+→ Geplant wird mit dem **Airbnb** (459 €). Liegt in der Nähe vom Ona Marbella Inn, daher gelten die dafür recherchierten Fahrzeiten weiterhin.
 
 #### Golfplätze (vom Nutzer festgelegt)
-| Platz | Lage | Fahrzeit ab Ona Marbella Inn | Fahrzeit ab Flughafen (AGP) | Terrain | Preis / Person | Golfamore |
+| Platz | Lage | Fahrzeit ab Unterkunft (Airbnb, ≈ Ona Marbella Inn) | Fahrzeit ab Flughafen (AGP) | Terrain | Preis / Person | Golfamore |
 |---|---|---|---|---|---|---|
 | Santa Clara | Marbella (N-340 km 187,5) | **21 min** | ~30–40 min | – (nicht recherchiert) | **110 €** | ✅ mit Golfamore |
-| Los Naranjos | Nueva Andalucía, Marbella | **16 min** | nicht flughafennah | 1.–9. uneben, 10.–18. flach (Nutzer-Angabe) | **185 €** | nein |
+| Finca Cortesín | Casares | **~35 min** | – (nicht recherchiert) | "undulating", stark abfallende Fairways, erhöhte Lage | **382 €** | nein |
 | Santana Golf | Mijas Costa, Golf Valley | **32 min** | ~30–40 min | flach, ehemalige Avocado-Plantage, von Mijas-Bergen umgeben | **95 €** | nein |
 | La Cala Resort — Europa + America (36 Loch) | Mijas Costa | **34 min** | ~30–40 min | Europa flacher als America/Asia, Fluss Ojén quert 8 Löcher | **300 €** (beide Kurse zusammen) | nein |
 | Baviera Golf | Vélez-Málaga (östlich von Málaga) | **1:10** — sehr weit | ~40 min | – (nicht recherchiert) | **55 €** | ✅ mit Golfamore |
@@ -52,38 +52,29 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 #### Golf-Rotation (vom Nutzer festgelegt)
 | Tag | Datum | Tee-off | Ablauf | Platz | Preis / Person | Bemerkung |
 |---|---|---|---|---|---|---|
-| 1 | Sa 13.03. | 14:30 | LH 1148 an 12:20 → Mietwagen → Golf → Check-in Ona Marbella Inn | **✅ Santana** | 95 € | 30–40 min ab Flughafen |
-| 2 | So 14.03. | 10:30 | Golf ab Hotel | **✅ Los Naranjos** | 185 € | 16 min ab Hotel, kürzeste Fahrt der Woche |
+| 1 | Sa 13.03. | 14:30 | LH 1148 an 12:20 → Mietwagen → Golf → Check-in Airbnb | **✅ Santana** | 95 € | 30–40 min ab Flughafen |
+| 2 | So 14.03. | 10:30 | Golf ab Hotel | **✅ Finca Cortesín** | 382 € | ~35 min ab Hotel; ersetzt Los Naranjos, sonntags am günstigsten |
 | 3 | Mo 15.03. | 8:00 & 14:00 | 36 Loch | **✅ La Cala Europa + America** | 300 € | löst den "2 Runden am 3. Tag"-Wunsch über den Resort-Verbund |
 | 4 | Di 16.03. | 10:30 | Golf ab Hotel | **✅ Santa Clara** | 110 € | 21 min ab Hotel, entspannter normaler Tag |
 | 5 | Mi 17.03. | 8:00 | Golf, danach direkt zum Flughafen, LH 1151 ab 17:10 | **✅ Baviera** | 55 € | ~40 min zum Flughafen — keine Rückfahrt zum Hotel mehr nötig, spart die 1:10-Rückfahrt gegenüber der alten Reihenfolge |
 
-→ **Greenfees gesamt pro Person: 745 €** (95+185+300+55+110)
+→ **Greenfees gesamt pro Person: 942 €** (95+382+300+55+110)
 
 #### Kosten gesamt pro Person (Costa del Sol, Stand jetzt)
 | Posten | Preis / Person |
 |---|---|
 | Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € |
-| Unterkunft (Ona Marbella Inn, 591 € / 2 Pers.) | 295,50 € |
-| Mietwagen (150 € / 2 Pers., pauschal) | 75,00 € |
-| Greenfees (5 Tage, s. oben) | 745,00 € |
-| **Gesamt** | **1.548,14 €** |
+| Unterkunft (Airbnb, 459 € / 2 Pers.) | 229,50 € |
+| Mietwagen (170 € / 2 Pers., kleiner Anbieter) | 85,00 € |
+| Greenfees (5 Tage, s. oben) | 942,00 € |
+| **Gesamt** | **1.689,14 €** |
 
 #### Offene Punkte (Costa del Sol)
 - ~~Baviera ist mit 1:10 ab Hotel eine sehr lange Fahrt für einen normalen Spieltag~~ — ✅ gelöst durch Tausch mit Santa Clara: Baviera ist jetzt Tag 5 (Abreisetag), danach geht's direkt zum Flughafen (~40 min) statt zurück zum Hotel.
-- **Valderrama vs. Finca Cortesín** — Entscheidung offen, ob einer der beiden einen bestehenden Tag ersetzt (San Roque, Alto Club und Azata Golf wurden dagegen ausgeschlossen, alle zu hügelig):
-
-  | Kriterium | Valderrama | Finca Cortesín |
-  |---|---|---|
-  | Preis | ~500–600 €/Person | ~375–400 €/Person |
-  | Fahrzeit ab Ona Marbella Inn | ~37–45 min | ~35 min |
-  | Terrain | "gently rolling" Parkland/Korkeichenwald, moderate Erhebungen (Quellen uneinheitlich, teils "hilly") | "undulating", stark abfallende Fairways, erhöhte Lage — tendenziell hügeliger trotz niedrigerem Preis |
-  | Caddie | Forecaddie Pflicht (Zusatzkosten) | kein Caddie-Zwang bekannt |
-  | Prestige | #1 Golfplatz Spaniens, Ryder-Cup-Austragungsort 1997 | WGC-Match-Play-Austragungsort, ebenfalls top, aber weniger ikonisch |
-  | Timing-Vorteil | keiner bekannt | sonntags am günstigsten (passt zu Tag 2, So 14.03.) |
-
-  Käme ggf. anstelle eines bestehenden Tages infrage (z.B. Tag 2, aktuell Los Naranjos) — welcher Tag/Platz getauscht wird, ist noch offen.
-- **Weitere Unterkunftsoption:** [Airbnb](https://www.airbnb.de/rooms/1429698256152680563?adults=2&check_in=2027-03-13&check_out=2027-03-17) für **459 € gesamt** (13.–17.03.2027, 2 Erwachsene) — günstiger als Ona Marbella Inn (591 €), aber teurer als AluaSun Marbella Park (376 €). Lage/Fahrzeiten noch nicht recherchiert. Entscheidung offen, geplant wird weiterhin mit Ona Marbella Inn.
+- ~~Valderrama vs. Finca Cortesín — Entscheidung offen~~ — ✅ entschieden: Finca Cortesín (382 €) ersetzt Los Naranjos an Tag 2. Valderrama nicht gewählt (San Roque, Alto Club und Azata Golf waren ohnehin schon ausgeschlossen, alle zu hügelig).
+- **Los Naranjos** (16 min ab Hotel, 185 €, kein Golfamore, 1.–9. uneben/10.–18. flach) bleibt als günstigere Alternative im Hinterkopf, falls Finca Cortesín (382 €) zu teuer erscheint.
+- **Referenz-Unterkunftsoption:** Ona Marbella Inn für **591 € gesamt** — Alternative zum jetzt gewählten Airbnb (459 €), als Referenz stehen gelassen. Fahrzeiten von dort wurden recherchiert und gelten laut Nutzer auch für das Airbnb (liegt in der Nähe).
+- **Mietwagenauswahl offen:** kleiner Anbieter (170 € gesamt, aktuell in der Kostentabelle angesetzt) vs. Sixt (275 € gesamt, bekannterer Name).
 - Geplant: ähnliche HTML-Übersichtsdatei wie für Valencia (golftrip-valencia-2027.html), sobald die Greenfee-Preise vorliegen.
 
 ## Rabatte / Karten
