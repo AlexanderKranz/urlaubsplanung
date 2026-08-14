@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golftrip Costa del Sol 2027</title>
+<style>
+  :root {
+    --paper: #F4F6EF;
+    --surface: #FFFFFF;
+    --surface-2: #ECF1E4;
+    --ink: #1B2A20;
+    --muted: #5B6B58;
+    --accent: #1F6B45;
+    --accent-2: #C96A2C;
+    --line: #DCE3D2;
+    --line-strong: #C7D2BC;
+    --ok-bg: #E4F3E8; --ok-fg:#1B6B44; --ok-line:#BFE0CB;
+    --warn-bg:#FBEFDD; --warn-fg:#93540F; --warn-line:#F0D8AE;
+    --open-bg:transparent; --open-fg:#5B6B58; --open-line:#B9C4B2;
+    --shadow: 0 1px 2px rgba(27,42,32,0.06), 0 8px 24px -12px rgba(27,42,32,0.18);
+
+    --font-display: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    --font-body: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, "Roboto Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #10160E;
+      --surface: #171F16;
+      --surface-2: #1C251A;
+      --ink: #E7ECDF;
+      --muted: #9FB09A;
+      --accent: #6BCB92;
+      --accent-2: #E6924F;
+      --line: #29332A;
+      --line-strong: #384435;
+      --ok-bg: rgba(107,203,146,0.12); --ok-fg:#8FDCAD; --ok-line: rgba(107,203,146,0.35);
+      --warn-bg: rgba(230,146,79,0.14); --warn-fg:#F2B87E; --warn-line: rgba(230,146,79,0.38);
+      --open-bg:transparent; --open-fg:#9FB09A; --open-line:#3A463A;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #10160E;
+    --surface: #171F16;
+    --surface-2: #1C251A;
+    --ink: #E7ECDF;
+    --muted: #9FB09A;
+    --accent: #6BCB92;
+    --accent-2: #E6924F;
+    --line: #29332A;
+    --line-strong: #384435;
+    --ok-bg: rgba(107,203,146,0.12); --ok-fg:#8FDCAD; --ok-line: rgba(107,203,146,0.35);
+    --warn-bg: rgba(230,146,79,0.14); --warn-fg:#F2B87E; --warn-line: rgba(230,146,79,0.38);
+    --open-bg:transparent; --open-fg:#9FB09A; --open-line:#3A463A;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: clamp(28px, 6vw, 64px) clamp(18px, 5vw, 28px) 80px;
+  }
+
+  a { color: var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-size: 0.72rem;
+    color: var(--accent-2);
+    margin: 0 0 10px;
+  }
+  h1.title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .lede {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-size: 0.74rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---------- Section headings ---------- */
+  h2.section-head {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 26px;
+  }
+  section + section { margin-top: 56px; }
+
+  /* ---------- Badges ---------- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .badge.ok   { background: var(--ok-bg);   color: var(--ok-fg);   border-color: var(--ok-line); }
+  .badge.warn { background: var(--warn-bg); color: var(--warn-fg); border-color: var(--warn-line); }
+  .badge.open { background: var(--open-bg); color: var(--open-fg); border-color: var(--open-line); }
+
+  /* ---------- Itinerary ---------- */
+  .days { list-style: none; margin: 0; padding: 0; }
+  .day {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 20px;
+    position: relative;
+  }
+  .day + .day { margin-top: 4px; }
+  .day-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+  }
+  .day-marker::after {
+    content: "";
+    flex: 1;
+    width: 1px;
+    margin-top: 12px;
+    background: repeating-linear-gradient(to bottom, var(--line-strong) 0 4px, transparent 4px 9px);
+  }
+  .day:last-child .day-marker::after { display: none; }
+  .day-num {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--accent);
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  .day-date {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 8px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .day-body {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 22px;
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+  }
+  .day-flight {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+    color: var(--accent-2);
+    background: var(--surface-2);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .course-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .course-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+  }
+  .day-cost {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.95rem;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .day-cost small { color: var(--muted); font-family: var(--font-body); font-size: 0.72rem; }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 12px 0 14px;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .meta strong {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .verdict {
+    margin: 0 0 8px;
+    font-size: 0.94rem;
+    color: var(--ink);
+  }
+  .note {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  .badge-line { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* ---------- Cost table ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 520px;
+    font-size: 0.9rem;
+  }
+  thead th {
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num, th.num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  td.item { color: var(--ink); font-weight: 500; }
+  td.sub { color: var(--muted); font-size: 0.82rem; margin-top: 2px; display: block; font-weight: 400; }
+  tfoot td {
+    padding: 14px 16px;
+    font-weight: 600;
+    border-top: 2px solid var(--line-strong);
+  }
+  tfoot tr.grand td {
+    font-size: 1.05rem;
+    background: var(--surface-2);
+  }
+
+  .cost-foot-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 14px 2px 0;
+  }
+
+  /* ---------- Open items ---------- */
+  .flags-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .flags-list li {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 0.9rem;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent-2);
+    border-radius: 8px;
+  }
+
+  footer.meta-foot {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 560px) {
+    .day { grid-template-columns: 44px 1fr; gap: 12px; }
+    .day-date { display: none; }
+    .course-row { flex-direction: column; align-items: flex-start; }
+    h1.title { font-size: 2rem; }
+    .stat-row { gap: 20px 28px; }
+  }
+
+  /* ---------- Tables as stacked cards on narrow screens ---------- */
+  @media (max-width: 640px) {
+    .table-wrap { overflow-x: visible; }
+    table { min-width: 0; width: 100%; }
+    thead { display: none; }
+    tbody, tfoot { display: block; }
+    tr {
+      display: block;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tfoot tr.grand {
+      background: var(--surface-2);
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+    td { display: block; border: none; padding: 4px 0; text-align: left; }
+    td:empty { display: none; }
+    td.item { font-weight: 500; padding-top: 4px; padding-bottom: 6px; }
+    td.num { text-align: left; }
+    td:not(.item)::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    td.sub { padding: 0; }
+  }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    .day-body, .table-wrap, .flags-list li { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Golftrip &middot; 13.–17. März 2027</p>
+    <h1 class="title">Fünf Tage Costa del Sol</h1>
+    <p class="lede">Zwei Spieler, ein Mietwagen, fünf Plätze rund um Marbella und Mijas. Golf direkt nach der Landung und direkt vor dem Rückflug, dazwischen drei Tage ab Hotel.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Golftage</span></div>
+      <div class="stat"><span class="stat-value">4</span><span class="stat-label">Nächte</span></div>
+      <div class="stat"><span class="stat-value">108</span><span class="stat-label">Loch gesamt</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Plätze</span></div>
+    </div>
+  </header>
+
+  <section class="weather">
+    <h2 class="section-head">Wetterprognose März</h2>
+    <p class="section-sub">Klimatisches Mittel für März an der Costa del Sol (keine Vorhersage für 2027 selbst, dafür ist es zu früh).</p>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">17–20&nbsp;°C</span><span class="stat-label">Tageshöchst</span></div>
+      <div class="stat"><span class="stat-value">~8&nbsp;°C</span><span class="stat-label">Nachttief</span></div>
+      <div class="stat"><span class="stat-value">~7&nbsp;h</span><span class="stat-label">Sonne / Tag</span></div>
+      <div class="stat"><span class="stat-value">5–12</span><span class="stat-label">Regentage / Monat</span></div>
+    </div>
+    <p class="note" style="margin-top:10px;"><strong>Sonnenaufgang ca. 7:20 Uhr &middot; Sonnenuntergang ca. 19:25 Uhr</strong></p>
+    <p class="note" style="margin-top:16px;">Die reinen Zahlen unterscheiden sich kaum von Valencia — der Ruf der Costa del Sol als verlässlicher kommt eher von der Lage (Sierra Blanca schirmt Marbella gegen Nordwinde ab, südexponierte Küste) als von spürbar weniger Regen laut Statistik. Realistisch einen Regentag oder Schauer irgendwo in den 5 Tagen einplanen.</p>
+  </section>
+
+  <section class="itinerary">
+    <h2 class="section-head">Tag für Tag</h2>
+   
+    <ol class="days">
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">1</span><span class="day-date">Sa&nbsp;13.03.</span></div>
+        <div class="day-body">
+          <span class="day-flight">LH&nbsp;1148 &middot; FRA 09:20 → AGP 12:20</span>
+          <div class="course-row">
+            <h3 class="course-name">Santana Golf</h3>
+            <div class="day-cost">95&nbsp;€ <small>/ Person</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>32&nbsp;min</strong> ab Flughafen</span>
+            <span class="meta">32&nbsp;min ab Hotel</span>
+            <span class="meta">Tee-off ca. <strong>14:30</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">Flach, ehemalige Avocado-Plantage im Golf Valley, von den Mijas-Bergen umgeben — einer der drei flughafennahen Plätze, deshalb der richtige Start für den Ankunftstag.</p>
+          <p class="note">Nach der Runde weiter zum Ona Marbella Inn, Check-in. Kein Golfamore-Rabatt an diesem Platz.</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">2</span><span class="day-date">So&nbsp;14.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">Los Naranjos</h3>
+            <div class="day-cost">185&nbsp;€ <small>/ Person</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>16&nbsp;min</strong> ab Hotel</span>
+            <span class="meta">Nueva Andalucía</span>
+            <span class="meta">Tee-off ca. <strong>10:30</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">Kürzeste Fahrt der ganzen Woche. Erste 9 Loch uneben, zweite 9 Loch flach — Robert-Trent-Jones-Klassiker im Herzen von Marbellas Golf Valley.</p>
+          <p class="note">Kein Golfamore-Rabatt an diesem Platz. Mit 185&nbsp;€ der teuerste Einzel-Greenfee der Woche. Evtl mit Valderama oder Finca Cortesin tauschen.</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">3</span><span class="day-date">Mo&nbsp;15.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">La Cala — Europa + America</h3>
+            <div class="day-cost">300&nbsp;€ <small>/ Person</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>34&nbsp;min</strong> ab Hotel</span>
+            <span class="meta">Mijas Costa</span>
+            <span class="meta">Tee-offs ca. <strong>8:00</strong> &amp; <strong>14:00</strong></span>
+            <span class="meta">36 Loch</span>
+          </div>
+          <p class="verdict">Zwei Kurse des größten Golfkomplexes Spaniens an einem Tag — Europa ist der flachere der drei La-Cala-Kurse, der Fluss Ojén quert acht Löcher. America ergänzt die zweite Runde.</p>
+          <p class="note">Löst den ursprünglichen Wunsch nach einer Doppelrunde. Kein Golfamore-Rabatt an diesem Platz. Preis gilt für beide Kurse zusammen.</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">4</span><span class="day-date">Di&nbsp;16.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">Santa Clara</h3>
+            <div class="day-cost">110&nbsp;€ <small>/ Person, mit Golfamore</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>21&nbsp;min</strong> ab Hotel</span>
+            <span class="meta">Marbella</span>
+            <span class="meta">Tee-off ca. <strong>10:30</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">In Marbella selbst gelegen — kurze, entspannte Fahrt für einen normalen Spieltag.</p>
+          <p class="note">Möglichkeit für eine zweite Runde.</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">5</span><span class="day-date">Mi&nbsp;17.03.</span></div>
+        <div class="day-body">
+          <span class="day-flight">LH&nbsp;1151 &middot; AGP 17:10 → FRA 20:10</span>
+          <div class="course-row">
+            <h3 class="course-name">Baviera Golf</h3>
+            <div class="day-cost">55&nbsp;€ <small>/ Person, mit Golfamore</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>1:10&nbsp;h</strong> ab Hotel; <strong>40&nbsp;min</strong> bis Flughafen</span>
+            <span class="meta">Vélez-Málaga</span>
+            <span class="meta">Tee-off ca. <strong>8:00</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">Am Fuß der Sierra de Almijara, deutlich östlich von Málaga.</p>
+          <p class="note">Bewusst auf den Abreisetag gelegt: nach der Runde geht's direkt zum Flughafen (~40&nbsp;min) statt zurück zum Hotel (1:10) — spart die sonst nötige lange Rückfahrt. Mietwagen-Rückgabe am Flughafen vor dem 17:10-Abflug.</p>
+
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="costs">
+    <h2 class="section-head">Kosten im Detail</h2>
+    <p class="section-sub">Alle Beträge pro Person. Golfamore-Kartenrabatt (50&nbsp;%) gilt nur bei Baviera und Santa Clara — bei allen anderen Plätzen der Normalpreis.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Posten</th>
+            <th class="num">Preis / Person</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Flüge<span class="sub">LH 1148 + LH 1151, Economy Comfort, hin &amp; zurück</span></td>
+            <td class="num" data-label="Preis / Person">432,64&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">bestätigt</span></td>
+          </tr>
+          <tr>
+            <td class="item">Unterkunft <span class="sub">Ona Marbella Inn, 4 Nächte, 591&nbsp;€ / 2 Pers.</span></td>
+            <td class="num" data-label="Preis / Person">295,50&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">bestätigt</span></td>
+          </tr>
+          <tr>
+            <td class="item">Mietwagen<span class="sub">Pauschal, ganze Reisedauer, 150&nbsp;€ / 2 Pers.</span></td>
+            <td class="num" data-label="Preis / Person">75,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge warn">Schätzung</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 1 — Santana</td>
+            <td class="num" data-label="Preis / Person">95,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 2 — Los Naranjos</td>
+            <td class="num" data-label="Preis / Person">185,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 3 — La Cala (36 Loch)</td>
+            <td class="num" data-label="Preis / Person">300,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 4 — Santa Clara</td>
+            <td class="num" data-label="Preis / Person">110,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">mit Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 5 — Baviera</td>
+            <td class="num" data-label="Preis / Person">55,00&nbsp;€</td>
+            <td data-label="Status"><span class="badge ok">mit Golfamore</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Greenfees gesamt</td>
+            <td class="num" data-label="Preis / Person">745,00&nbsp;€</td>
+            <td></td>
+          </tr>
+          <tr class="grand">
+            <td>Gesamt pro Person</td>
+            <td class="num" data-label="Preis / Person">1.548,14&nbsp;€</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="cost-foot-note">Verpflegung, Sprit und weitere Ausgaben vor Ort sind hier noch nicht enthalten.</p>
+  </section>
+
+  <section class="flags">
+    <h2 class="section-head">Offene Punkte</h2>
+    <ul class="flags-list">
+      <li><strong>Valderrama</strong> oder <strong>Finca Cortesín</strong> könnten einen bestehenden Tag ersetzen — Vergleich siehe Tabelle unten. Beide können online gebucht werden.</li>
+      <li>
+        <div>
+          Weitere Hoteloptionen standen zur Wahl, sind aber nicht die aktuelle Planung:
+          <div style="display:flex; flex-direction:column; gap:4px; margin:8px 0;">
+            <span>&bull; <strong>AluaSun Marbella Park</strong> — außerhalb gelegen, 376&nbsp;€ für beide</span>
+            <span>&bull; <strong>Hotel Monarque El Rodeo</strong> — noch zentraler als Ona Marbella Inn, 616&nbsp;€ für beide</span>
+            <span>&bull; <a href="https://www.airbnb.de/rooms/1429698256152680563?adults=2&amp;check_in=2027-03-13&amp;check_out=2027-03-17" target="_blank" rel="noopener">Airbnb</a> — 459&nbsp;€ für beide, Lage ähnlich zentral wie die Hotels</span>
+          </div>
+          Geplant wird weiterhin mit Ona Marbella Inn (591&nbsp;€).
+        </div>
+      </li>
+    </ul>
+
+    <div class="table-wrap" style="margin-top:18px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Kriterium</th>
+            <th>Valderrama</th>
+            <th>Finca Cortesín</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Preis / Person</td>
+            <td data-label="Valderrama">~650&nbsp;€ + Caddie</td>
+            <td data-label="Finca Cortesín">~400&nbsp;€</td>
+          </tr>
+          <tr>
+            <td class="item">Fahrzeit ab Ona Marbella Inn</td>
+            <td data-label="Valderrama">~45&nbsp;min</td>
+            <td data-label="Finca Cortesín">~35&nbsp;min</td>
+          </tr>
+          <tr>
+            <td class="item">Terrain</td>
+            <td data-label="Valderrama">"gently rolling" Parkland im Korkeichenwald, moderate Erhebungen (Quellen uneinheitlich)</td>
+            <td data-label="Finca Cortesín">"undulating", stark abfallende Fairways, erhöhte Lage — tendenziell hügeliger</td>
+          </tr>
+          <tr>
+            <td class="item">Caddie</td>
+            <td data-label="Valderrama">Forecaddie Pflicht</td>
+            <td data-label="Finca Cortesín">kein Caddie-Zwang bekannt</td>
+          </tr>
+          <tr>
+            <td class="item">Prestige</td>
+            <td data-label="Valderrama">#1 Golfplatz Spaniens, Ryder-Cup-Austragungsort 1997</td>
+            <td data-label="Finca Cortesín">WGC-Match-Play-Austragungsort</td>
+          </tr>
+          <tr>
+            <td class="item">Timing-Vorteil</td>
+            <td data-label="Valderrama">nur montags und donnerstags (12:45 / 13:00)</td>
+            <td data-label="Finca Cortesín">sonntags am günstigsten</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cost-foot-note">Entscheidung offen, ob und welcher bestehende Tag (z.&nbsp;B. Tag&nbsp;2, So 14.03., aktuell Los Naranjos) ersetzt wird.</p>
+  </section>
+
+  <footer class="meta-foot">
+    Stand der Recherche: 13.08.2026
+  </footer>
+
+</div>
+
+</body>
+</html>

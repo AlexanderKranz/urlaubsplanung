@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golftrip Valencia 2027</title>
+<style>
+  :root {
+    --paper: #F4F6EF;
+    --surface: #FFFFFF;
+    --surface-2: #ECF1E4;
+    --ink: #1B2A20;
+    --muted: #5B6B58;
+    --accent: #1F6B45;
+    --accent-2: #C96A2C;
+    --line: #DCE3D2;
+    --line-strong: #C7D2BC;
+    --ok-bg: #E4F3E8; --ok-fg:#1B6B44; --ok-line:#BFE0CB;
+    --warn-bg:#FBEFDD; --warn-fg:#93540F; --warn-line:#F0D8AE;
+    --open-bg:transparent; --open-fg:#5B6B58; --open-line:#B9C4B2;
+    --shadow: 0 1px 2px rgba(27,42,32,0.06), 0 8px 24px -12px rgba(27,42,32,0.18);
+
+    --font-display: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    --font-body: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, "Roboto Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #10160E;
+      --surface: #171F16;
+      --surface-2: #1C251A;
+      --ink: #E7ECDF;
+      --muted: #9FB09A;
+      --accent: #6BCB92;
+      --accent-2: #E6924F;
+      --line: #29332A;
+      --line-strong: #384435;
+      --ok-bg: rgba(107,203,146,0.12); --ok-fg:#8FDCAD; --ok-line: rgba(107,203,146,0.35);
+      --warn-bg: rgba(230,146,79,0.14); --warn-fg:#F2B87E; --warn-line: rgba(230,146,79,0.38);
+      --open-bg:transparent; --open-fg:#9FB09A; --open-line:#3A463A;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #10160E;
+    --surface: #171F16;
+    --surface-2: #1C251A;
+    --ink: #E7ECDF;
+    --muted: #9FB09A;
+    --accent: #6BCB92;
+    --accent-2: #E6924F;
+    --line: #29332A;
+    --line-strong: #384435;
+    --ok-bg: rgba(107,203,146,0.12); --ok-fg:#8FDCAD; --ok-line: rgba(107,203,146,0.35);
+    --warn-bg: rgba(230,146,79,0.14); --warn-fg:#F2B87E; --warn-line: rgba(230,146,79,0.38);
+    --open-bg:transparent; --open-fg:#9FB09A; --open-line:#3A463A;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: clamp(28px, 6vw, 64px) clamp(18px, 5vw, 28px) 80px;
+  }
+
+  a { color: var(--accent); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-size: 0.72rem;
+    color: var(--accent-2);
+    margin: 0 0 10px;
+  }
+  h1.title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .lede {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 28px;
+  }
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; }
+  .stat-value {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-size: 0.74rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---------- Section headings ---------- */
+  h2.section-head {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 26px;
+    max-width: 60ch;
+  }
+  section + section { margin-top: 56px; }
+
+  /* ---------- Badges ---------- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .badge.ok   { background: var(--ok-bg);   color: var(--ok-fg);   border-color: var(--ok-line); }
+  .badge.warn { background: var(--warn-bg); color: var(--warn-fg); border-color: var(--warn-line); }
+  .badge.open { background: var(--open-bg); color: var(--open-fg); border-color: var(--open-line); }
+
+  /* ---------- Itinerary ---------- */
+  .days { list-style: none; margin: 0; padding: 0; }
+  .day {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 20px;
+    position: relative;
+  }
+  .day + .day { margin-top: 4px; }
+  .day-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+  }
+  .day-marker::after {
+    content: "";
+    flex: 1;
+    width: 1px;
+    margin-top: 12px;
+    background: repeating-linear-gradient(to bottom, var(--line-strong) 0 4px, transparent 4px 9px);
+  }
+  .day:last-child .day-marker::after { display: none; }
+  .day-num {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--accent);
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  .day-date {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 8px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .day-body {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 22px;
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+  }
+  .day-flight {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+    color: var(--accent-2);
+    background: var(--surface-2);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .course-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .course-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+  }
+  .day-cost {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.95rem;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .day-cost small { color: var(--muted); font-family: var(--font-body); font-size: 0.72rem; }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 12px 0 14px;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .meta strong {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .verdict {
+    margin: 0 0 8px;
+    font-size: 0.94rem;
+    color: var(--ink);
+  }
+  .note {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  .badge-line { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* ---------- Cost table ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 520px;
+    font-size: 0.9rem;
+  }
+  thead th {
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num, th.num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  td.item { color: var(--ink); font-weight: 500; }
+  td.sub { color: var(--muted); font-size: 0.82rem; margin-top: 2px; display: block; font-weight: 400; }
+  tfoot td {
+    padding: 14px 16px;
+    font-weight: 600;
+    border-top: 2px solid var(--line-strong);
+  }
+  tfoot tr.grand td {
+    font-size: 1.05rem;
+    background: var(--surface-2);
+  }
+
+  .cost-foot-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 14px 2px 0;
+    max-width: 68ch;
+  }
+
+  /* ---------- Open items ---------- */
+  .flags-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .flags-list li {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 0.9rem;
+    padding: 12px 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent-2);
+    border-radius: 8px;
+  }
+
+  footer.meta-foot {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 560px) {
+    .day { grid-template-columns: 44px 1fr; gap: 12px; }
+    .day-date { display: none; }
+    .course-row { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    .day-body, .table-wrap, .flags-list li { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Golftrip &middot; 10.–14. März 2027</p>
+    <h1 class="title">Fünf Tage Valencia</h1>
+    <p class="lede">Zwei Spieler, ein Mietwagen, fünf Plätze. Golf direkt nach der Landung und direkt vor dem Rückflug, dazwischen vier Tage rund um Valencia.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Golftage</span></div>
+      <div class="stat"><span class="stat-value">4</span><span class="stat-label">Nächte</span></div>
+      <div class="stat"><span class="stat-value">99</span><span class="stat-label">Loch gesamt</span></div>
+      <div class="stat"><span class="stat-value">5</span><span class="stat-label">Plätze</span></div>
+    </div>
+  </header>
+
+  <section class="weather">
+    <h2 class="section-head">Wetterprognose März</h2>
+    <p class="section-sub">Klimatisches Mittel für März in Valencia (keine Vorhersage für 2027 selbst, dafür ist es zu früh) — solide Ausgangslage für Golf, aber ohne Garantie.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">17–18&nbsp;°C</span><span class="stat-label">Tageshöchst</span></div>
+      <div class="stat"><span class="stat-value">8–9&nbsp;°C</span><span class="stat-label">Nachttief</span></div>
+      <div class="stat"><span class="stat-value">~216&nbsp;h</span><span class="stat-label">Sonne / Monat</span></div>
+      <div class="stat"><span class="stat-value">4–11</span><span class="stat-label">Regentage / Monat</span></div>
+    </div>
+    <p class="note" style="margin-top:16px;">Quellen schwanken bei den Regentagen deutlich (4 bis 11 Tage im Monat, 40–66&nbsp;mm) — realistisch einen Regentag oder Schauer irgendwo in den 5 Tagen einplanen, aber keinen Reiseplan-Killer erwarten. Noch keine Winterzeit-Sommerzeit-Umstellung zum Reisezeitpunkt (endet erst 28.03.2027) — Sonnenuntergang entsprechend früh.</p>
+  </section>
+
+  <section class="itinerary">
+    <h2 class="section-head">Tag für Tag</h2>
+    <p class="section-sub">Fahrzeiten und Preise mit unterschiedlicher Sicherheit — <span class="badge ok" style="vertical-align:1px">bestätigt</span> per Google Maps oder eigener Angabe, <span class="badge warn" style="vertical-align:1px">Schätzung</span> aus Websuche oder Berechnung, <span class="badge open" style="vertical-align:1px">offen</span> noch zu klären.</p>
+
+    <ol class="days">
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">1</span><span class="day-date">Mi&nbsp;10.03.</span></div>
+        <div class="day-body">
+          <span class="day-flight">LH&nbsp;1100 &middot; FRA 09:40 → VLC 12:00</span>
+          <div class="course-row">
+            <h3 class="course-name">El Bosque</h3>
+            <div class="day-cost">105&nbsp;€ <small>/ Person</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>20&nbsp;min</strong> ab Flughafen</span>
+            <span class="meta">Tee-off ca. <strong>14:00</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">Robert-Trent-Jones-Design, etwas hügelig — kein Flachland-Golf, aber der Nähe zum Flughafen geschuldet die richtige Wahl für den Ankunftstag.</p>
+          <p class="note">Nach der Runde Fahrt zur Unterkunft, Check-in La Casita de Jimena. Bei nur 20&nbsp;Min. Anfahrt wäre auch ein früherer Tee-off als 14:00 denkbar — mehr Puffer vor Sonnenuntergang (18:30). Kein Golfamore-Rabatt an diesem Platz.</p>
+          <div class="badge-line">
+            <span class="badge open">Tee-off-Zeit offen</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">2</span><span class="day-date">Do&nbsp;11.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">Mediterráneo Golf</h3>
+            <div class="day-cost">40&nbsp;€ <small>/ Person, mit Golfamore</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>56–70&nbsp;min</strong> ab Unterkunft</span>
+            <span class="meta">Borriol (Castellón)</span>
+          </div>
+          <p class="verdict">Bergige Lage nahe Castellón — spielerisch ein Ausreißer im Programm, ersetzt aber das geschlossene Foressos.</p>
+          <p class="note">Fahrzeit überschreitet die ursprüngliche "max. 1h ab Hotel"-Vorgabe deutlich. Bewusst so gewählt, da keine näher gelegene Alternative offenstand — bitte noch einmal gegenchecken, ob die knapp 1&nbsp;Stunde pro Strecke akzeptabel ist.</p>
+          <div class="badge-line">
+            <span class="badge warn">Fahrzeit über Ziel-Radius</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">3</span><span class="day-date">Fr&nbsp;12.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">Escorpión</h3>
+            <div class="day-cost">~165&nbsp;€ <small>/ Person, Schätzung</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>15–20&nbsp;min</strong> ab Unterkunft</span>
+            <span class="meta">Bétera</span>
+            <span class="meta">27 Loch</span>
+          </div>
+          <p class="verdict">27-Loch-Anlage (Masía, Lagos, Nuevos) — an einem Tag alle drei Neuner nacheinander, dadurch ein längerer, aber abwechslungsreicher Spieltag.</p>
+          <p class="note">Privater Club, ggf. Mitglieder-Einführung nötig — vor Buchung direkt beim Club klären. Der 27-Loch-Preis ist eine Schätzung (18-Loch-Richtwert 109&nbsp;€ + ~50&nbsp;% Aufpreis für die zusätzlichen 9), keine echte Quelle. Kein Golfamore-Rabatt an diesem Platz.</p>
+          <div class="badge-line">
+            <span class="badge warn">Preis geschätzt</span>
+            <span class="badge open">Gast-Zugang offen</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">4</span><span class="day-date">Sa&nbsp;13.03.</span></div>
+        <div class="day-body">
+          <div class="course-row">
+            <h3 class="course-name">La Galiana</h3>
+            <div class="day-cost">110&nbsp;€ <small>/ Person</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>45–50&nbsp;min</strong> ab Unterkunft</span>
+            <span class="meta">Carcaixent</span>
+          </div>
+          <p class="verdict">Parkland im Tal, hügelig. Die längste Anfahrt der Woche — deshalb bewusst auf einen normalen Spieltag gelegt statt auf den Abreisetag.</p>
+          <p class="note">Preis vom Nutzer bestätigt. Kein Golfamore-Rabatt an diesem Platz.</p>
+        </div>
+      </li>
+
+      <li class="day">
+        <div class="day-marker"><span class="day-num">5</span><span class="day-date">So&nbsp;14.03.</span></div>
+        <div class="day-body">
+          <span class="day-flight">LH&nbsp;1103 &middot; VLC 18:15 → FRA 20:40</span>
+          <div class="course-row">
+            <h3 class="course-name">El Saler</h3>
+            <div class="day-cost">~65&nbsp;€ <small>/ Person, mit Golfamore</small></div>
+          </div>
+          <div class="meta-row">
+            <span class="meta"><strong>31&nbsp;min</strong> zum Flughafen</span>
+            <span class="meta">Tee-off ca. <strong>08:00</strong></span>
+            <span class="meta">18 Loch</span>
+          </div>
+          <p class="verdict">Flach, Links-artig, im Naturpark L'Albufera — einer der besten Plätze Spaniens, verdienter Abschluss der Woche.</p>
+          <p class="note">Früher Tee-off lässt viel Puffer: 18 Loch fertig ca. 12:30, danach Mietwagen-Rückgabe am Flughafen vor dem 18:15-Abflug. Normalpreis 130&nbsp;€, mit Golfamore ~65&nbsp;€.</p>
+          <div class="badge-line">
+            <span class="badge ok">Zeitplan komfortabel</span>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="costs">
+    <h2 class="section-head">Kosten im Detail</h2>
+    <p class="section-sub">Alle Beträge pro Person. Golfamore-Kartenrabatt (50&nbsp;%) gilt nur bei Mediterráneo Golf und El Saler — bei allen anderen Plätzen der Normalpreis.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Posten</th>
+            <th class="num">Preis / Person</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Flüge<span class="sub">LH 1100 + LH 1103, Economy Comfort, hin &amp; zurück</span></td>
+            <td class="num">365,77&nbsp;€</td>
+            <td><span class="badge ok">bestätigt</span></td>
+          </tr>
+          <tr>
+            <td class="item">Unterkunft <span class="sub">La Casita de Jimena, 4 Nächte, 475&nbsp;€ / 2 Pers.</span></td>
+            <td class="num">237,50&nbsp;€</td>
+            <td><span class="badge ok">bestätigt</span></td>
+          </tr>
+          <tr>
+            <td class="item">Mietwagen <span class="sub">Opel Astra o. ä., Check24, ganze Reisedauer, 140&nbsp;€ / 2 Pers.</span></td>
+            <td class="num">70,00&nbsp;€</td>
+            <td><span class="badge warn">Schätzung</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 1 — El Bosque</td>
+            <td class="num">105,00&nbsp;€</td>
+            <td><span class="badge ok">kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 2 — Mediterráneo</td>
+            <td class="num">40,00&nbsp;€</td>
+            <td><span class="badge ok">mit Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 3 — Escorpión (27 Loch)</td>
+            <td class="num">~165,00&nbsp;€</td>
+            <td><span class="badge warn">Schätzung, kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 4 — La Galiana</td>
+            <td class="num">110,00&nbsp;€</td>
+            <td><span class="badge ok">kein Golfamore</span></td>
+          </tr>
+          <tr>
+            <td class="item">Tag 5 — El Saler</td>
+            <td class="num">~65,00&nbsp;€</td>
+            <td><span class="badge ok">mit Golfamore</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Greenfees gesamt</td>
+            <td class="num">485,00&nbsp;€</td>
+            <td></td>
+          </tr>
+          <tr class="grand">
+            <td>Gesamt pro Person</td>
+            <td class="num">1.158,27&nbsp;€</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="cost-foot-note">Verpflegung, Sprit und weitere Ausgaben vor Ort sind hier noch nicht enthalten.</p>
+  </section>
+
+  <section class="flags">
+    <h2 class="section-head">Offene Punkte</h2>
+    <ul class="flags-list">
+      <li>Escorpión ist ein privater Club — Gast-Zugang bzw. Mitglieder-Einführung vor der 27-Loch-Buchung direkt klären.</li>
+      <li>Die Unterkunft (La Casita de Jimena) ist eine Ferienunterkunft mit 2 Schlafzimmern und Frühstück, in einem Wohngebiet gelegen — Alternativen werden noch verglichen, dürften aber teurer ausfallen.</li>
+      <li>Fahrzeiten ab der Unterkunft (La Casita de Jimena) sind noch nicht per Google Maps verifiziert — bisherige Werte beziehen sich auf das Zentrum allgemein.</li>
+      <li>Escorpión-27-Loch-Preis ist eine Schätzung ohne echte Quelle — vor Buchung direkt beim Club erfragen.</li>
+      <li>Tee-Time-Verfügbarkeit für alle fünf Runden erst prüfbar, sobald der 2027-Kalender der Clubs online ist (üblicherweise 6–12 Monate im Voraus).</li>
+    </ul>
+  </section>
+
+  <footer class="meta-foot">
+    Stand der Recherche: 12.08.2026
+  </footer>
+
+</div>
+
+</body>
+</html>
