@@ -42,23 +42,24 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 | Platz | Lage | Fahrzeit ab Unterkunft (Airbnb, ≈ Ona Marbella Inn) | Fahrzeit ab Flughafen (AGP) | Terrain | Preis / Person | Golfamore |
 |---|---|---|---|---|---|---|
 | Santa Clara | Marbella (N-340 km 187,5) | **21 min** | ~30–40 min | – (nicht recherchiert) | **110 €** | ✅ mit Golfamore |
-| Finca Cortesín | Casares | **~35 min** | – (nicht recherchiert) | "undulating", stark abfallende Fairways, erhöhte Lage | **382 €** | nein |
+| ~~Finca Cortesín~~ | Casares | **~35 min** | – (nicht recherchiert) | "undulating", stark abfallende Fairways, erhöhte Lage | **382 €** | nein |
 | Santana Golf | Mijas Costa, Golf Valley | **32 min** | ~30–40 min | flach, ehemalige Avocado-Plantage, von Mijas-Bergen umgeben | **95 €** | nein |
-| La Cala Resort — Europa + America (36 Loch) | Mijas Costa | **34 min** | ~30–40 min | Europa flacher als America/Asia, Fluss Ojén quert 8 Löcher | **300 €** (beide Kurse zusammen) | nein |
+| La Cala Resort — Europa + America (36 Loch) | Mijas Costa | **34 min** | ~30–40 min | Europa flacher als America/Asia, Fluss Ojén quert 8 Löcher | **268 €** (beide Kurse zusammen) | nein |
+| Real Club de Sotogrande | Sotogrande | **45 min** | – (nicht recherchiert) | flach (flacher als die anderen Sotogrande-Plätze, die in die Hügel gebaut sind), nah an der Küste, Robert-Trent-Jones-Design, Wasserhindernisse an Loch 12–14 & 16–17 | **420 €** | nein |
 | Baviera Golf | Vélez-Málaga (östlich von Málaga) | **1:10** — sehr weit | ~40 min | – (nicht recherchiert) | **55 €** | ✅ mit Golfamore |
 
-→ Vom Flughafen aus bieten sich Santa Clara, Santana und La Cala an (alle 30–40 min) — passend für An-/Abreisetag.
+→ Vom Flughafen aus bieten sich Santa Clara, Santana und La Cala an (alle 30–40 min) — passend für An-/Abreisetag. Finca Cortesín ist raus aus der Rotation (durch La Cala auf Tag 2 ersetzt).
 
 #### Golf-Rotation (vom Nutzer festgelegt)
 | Tag | Datum | Tee-off | Ablauf | Platz | Preis / Person | Bemerkung |
 |---|---|---|---|---|---|---|
 | 1 | Sa 13.03. | 14:30 | LH 1148 an 12:20 → Mietwagen → Golf → Check-in Airbnb | **✅ Santana** | 95 € | 30–40 min ab Flughafen |
-| 2 | So 14.03. | 10:30 | Golf ab Hotel | **✅ Finca Cortesín** | 382 € | ~35 min ab Hotel; ersetzt Los Naranjos, sonntags am günstigsten |
-| 3 | Mo 15.03. | 8:00 & 14:00 | 36 Loch | **✅ La Cala Europa + America** | 300 € | löst den "2 Runden am 3. Tag"-Wunsch über den Resort-Verbund |
+| 2 | So 14.03. | 8:00 & 14:00 | 36 Loch, Golf ab Hotel | **✅ La Cala Europa + America** | 268 € | ~34 min ab Hotel; von Tag 3 hierher verschoben, löst den "2 Runden"-Wunsch weiterhin über den Resort-Verbund |
+| 3 | Mo 15.03. | 11:39 | Golf ab Hotel | **✅ Real Club de Sotogrande** | 420 € | **Gebucht (Ben)**; ersetzt La Cala an Tag 3; 45 min ab Hotel, flaches Terrain (Robert Trent Jones) |
 | 4 | Di 16.03. | 10:30 | Golf ab Hotel | **✅ Santa Clara** | 110 € | 21 min ab Hotel, entspannter normaler Tag |
 | 5 | Mi 17.03. | 8:00 | Golf, danach direkt zum Flughafen, LH 1151 ab 17:10 | **✅ Baviera** | 55 € | ~40 min zum Flughafen — keine Rückfahrt zum Hotel mehr nötig, spart die 1:10-Rückfahrt gegenüber der alten Reihenfolge |
 
-→ **Greenfees gesamt pro Person: 942 €** (95+382+300+55+110)
+→ **Greenfees gesamt pro Person: 948 €** (95+268+420+110+55)
 
 #### Kosten gesamt pro Person (Costa del Sol, Stand jetzt)
 | Posten | Preis / Person | Status |
@@ -66,16 +67,16 @@ Wird jetzt geprüft. Vorteil laut erster Einschätzung: höchste Golfplatzdichte
 | Flug (LH 1148 + LH 1151, Economy Comfort) | 432,64 € | **Gebucht (separat)** |
 | Unterkunft (Airbnb, 459 € / 2 Pers., bis 11.02. kostenlos stornierbar) | 229,50 € | **Gebucht (Ben)** |
 | Mietwagen (255 € / 2 Pers.) | 127,50 € | **Gebucht (Ben)** |
-| Greenfees (5 Tage, s. oben) | 942,00 € | **noch buchen** |
-| **Gesamt** | **1.731,64 €** | |
+| Greenfees (5 Tage, s. oben) | 948,00 € | teils gebucht (Sotogrande von Ben), Rest noch buchen |
+| **Gesamt** | **1.737,64 €** | |
 
 #### Offene Punkte (Costa del Sol)
-- ~~Baviera ist mit 1:10 ab Hotel eine sehr lange Fahrt für einen normalen Spieltag~~ — ✅ gelöst durch Tausch mit Santa Clara: Baviera ist jetzt Tag 5 (Abreisetag), danach geht's direkt zum Flughafen (~40 min) statt zurück zum Hotel.
-- ~~Valderrama vs. Finca Cortesín — Entscheidung offen~~ — ✅ entschieden: Finca Cortesín (382 €) ersetzt Los Naranjos an Tag 2. Valderrama nicht gewählt (San Roque, Alto Club und Azata Golf waren ohnehin schon ausgeschlossen, alle zu hügelig).
-- **Los Naranjos** (16 min ab Hotel, 185 €, kein Golfamore, 1.–9. uneben/10.–18. flach) bleibt als günstigere Alternative im Hinterkopf, falls Finca Cortesín (382 €) zu teuer erscheint.
-- **Referenz-Unterkunftsoption:** Ona Marbella Inn für **591 € gesamt** — Alternative zum jetzt gewählten Airbnb (459 €), als Referenz stehen gelassen. Fahrzeiten von dort wurden recherchiert und gelten laut Nutzer auch für das Airbnb (liegt in der Nähe).
-- ~~Mietwagenauswahl offen~~ — ✅ entschieden: 255 € gesamt.
-- Geplant: ähnliche HTML-Übersichtsdatei wie für Valencia (golftrip-valencia-2027.html), sobald die Greenfee-Preise vorliegen.
+- **Los Naranjos** (16 min ab Hotel, 185 €, kein Golfamore, 1.–9. uneben/10.–18. flach) bleibt als günstigere Alternative im Hinterkopf, falls doch wieder ein Platz für Tag 2 gesucht wird.
+- **Santana** (Tag 1): noch nicht buchbar. Laut Homepage sind E-Trolleys mietbar, und die Etikette-Regeln haben einen Abschnitt zu Hand-/E-Trolleys — Laufen sollte also möglich sein.
+- **La Cala** (Tag 2): wegen Laufen angeschrieben (Antwort steht noch aus). Auffällig: 2 Einzelrunden zu buchen ist günstiger als das 36-Loch-Package.
+- **Santa Clara** (Tag 4): noch nicht buchbar.
+- **Baviera** (Tag 5): Trolleys ebenfalls mietbar, Laufen also auch hier möglich. Schon buchbar, allerdings nicht über die App.
+- **Santa Clara & Baviera — Buchung bewusst zurückgestellt:** beide laufen über Golfamore, die 2027er Karte gibt es noch nicht, in Q4 sind vermutlich noch Promos zu erwarten — deshalb mit der Buchung dieser beiden noch warten.
 
 ## Rabatte / Karten
 - **Golfamore Card** vorhanden → 50% Rabatt auf Greenfees bei teilnehmenden Plätzen
